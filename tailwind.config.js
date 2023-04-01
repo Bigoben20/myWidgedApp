@@ -15,6 +15,16 @@ module.exports = {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            animation: {
+                waves: 'waves 1s ease-in-out infinite',
+            },
+            keyframes: {
+                waves: {
+                  '0%': { filter: 'hue-rotate(0deg)' },
+                  '50%': { filter: 'hue-rotate(180deg)' },
+                  '100%': { filter: 'hue-rotate(360deg)' },
+                }
+              }
         },
     },
 
