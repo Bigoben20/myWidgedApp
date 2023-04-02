@@ -2,7 +2,7 @@
     <Head title="Welcome" />
 
     <div
-        class="relative min-h-screen bg-gray-100 bg-center sm:flex sm:justify-center sm:items-center bg-dots-darker dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        class="relative min-h-screen bg-gray-100 bg-center sm:flex sm:justify-center sm:items-start bg-dots-darker dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         <Navbar />
         <!-- <div v-if="canLogin" class="p-6 text-right sm:fixed sm:top-0 sm:right-0">
             <Link v-if="$page.props.auth.user" :href="route('dashboard')"
@@ -19,14 +19,16 @@
                 Register</Link>
             </template>
         </div> -->
-        <slot/>
+        <div class="pt-[64px] md:pt-[76px] w-full h-fit">
+            <slot/>
+        </div>
         
     </div>
 </template>
 
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
-import Navbar from "@/Layouts/Navbar.vue";
+import Navbar from "./Navbar.vue";
 
 defineProps({
     canLogin: Boolean,
